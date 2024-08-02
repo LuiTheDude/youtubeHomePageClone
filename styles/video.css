@@ -1,0 +1,114 @@
+.link{
+    text-decoration: none;
+    color: black;
+}
+.searchbar {
+    display: block;
+}
+.videoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 35px;
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+}
+
+@media (max-width: 750px) {
+    .videoGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1400px) {
+    .videoGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1401px) {
+    .videoGrid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.thumbnailRow {
+    margin-bottom: 10px;
+    position: relative;
+}
+.time {
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 15px;
+    right: 4px;
+    font-size: 12px;
+    font-weight: 450;
+    padding: 2px 2px 2px 2px;
+    opacity: 0.85;
+    border-radius: 3px;
+}
+.thumbnail {
+    width: 100%;
+}.videoInfoGrid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.videoTitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 12px;
+
+}
+.profilePicture {
+    width: 40px;
+    border-radius: 40px;
+    position: relative
+}
+.popup {
+    display: flex;
+    background-color: white;
+    color: black;
+    position: absolute;
+    padding: 3px 12px 3px 6px;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(25, 25, 25, 0.4);
+    z-index: 300;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.channelPicture:hover .popup {
+    opacity: 1;
+}
+.popup img {
+    width: 55px;
+    border-radius: 40px;
+    position: relative;
+    margin: 7px 7px 7px 7px;
+}
+.popupTextDiv {
+    margin-left: 3px;
+    margin-right: 5px;
+}
+.popupAuthor {
+    padding-top: 3px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.popupSubscribers {
+    padding-top: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    color: gray;
+}
+
+.videoAuthor, 
+.videoStats {
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+    margin-bottom: 4px;
+}
